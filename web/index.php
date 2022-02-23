@@ -7,7 +7,7 @@
   session_start();
   ob_start();
 
-  require_once __DIR__ . '/../../Core/boot.php';
+  require_once __DIR__ . '/../Core/boot.php';
   require_once $dia->config['dir']['root'] ."/vendor/autoload.php";
   
   $dia->autoload();
@@ -106,7 +106,7 @@
           'dia-export-csv': Vue.defineAsyncComponent( () => loadModule('./../../Core/Components/Vue/ExportCSV.vue', options)),
           <?php
             foreach (\Core\Dia::$loadedWebComponents as $com) {
-              echo "'$com': Vue.defineAsyncComponent( () => loadModule('./../Components/Admin/$com.vue', options)),";
+              echo "'$com': Vue.defineAsyncComponent( () => loadModule('./../Components/$com.vue', options)),";
             }
           ?> }
         ,
