@@ -10,7 +10,8 @@
 
   // SUBOROVE NASTAVENIA
   $config['dir']['root']        = dirname(__FILE__);
-  $config['dir']['web']         = dirname(__FILE__) . "/web/Admin";
+  $config['dir']['web']         = dirname(__FILE__) . "/web/";
+  $config['host']               = $_SERVER['HTTP_HOST'] . "/holes/UcmGameWeb";
 
   // NASTAVENIA DIE
   $config['web']['includes']    = "Includes";
