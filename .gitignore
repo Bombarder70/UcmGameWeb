@@ -1,0 +1,5 @@
+/vendor
+/node_modules
+/Files
+/Core
+package-lock.json
