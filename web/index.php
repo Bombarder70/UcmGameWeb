@@ -8,7 +8,6 @@
   ob_start();
 
   require_once __DIR__ . '/../Core/boot.php';
-  require_once $dia->config['dir']['root'] ."/vendor/autoload.php";
   
   $dia->autoload();
 
