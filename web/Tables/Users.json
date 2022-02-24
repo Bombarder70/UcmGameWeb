@@ -1,0 +1,31 @@
+{
+  "nickname": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "Meno hráča",
+    "readonly": "true"
+	},
+  "score": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "Skóre",
+    "type": "number",
+    "step": 1,
+    "readonly": "true"
+	},
+  "deaths": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "Úmrtí",
+    "type": "number",
+    "step": 1,
+    "readonly": "true"
+	},
+	"last_played": {
+		"show_in_table":  true,
+		"show_in_form": true,
+		"name_in_table": "Naposledny aktívny",
+		"required": true,
+    "readonly": "true"
+	}
+}

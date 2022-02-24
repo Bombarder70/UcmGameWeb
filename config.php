@@ -2,7 +2,7 @@
 
   // DATABAZOVE NASTAVENIA
   $config['db']['host']         = "localhost";
-  $config['db']['db']           = "dia";
+  $config['db']['db']           = "ucm_game";
   $config['db']['user']         = "root";
   $config['db']['password']     = "";
 
