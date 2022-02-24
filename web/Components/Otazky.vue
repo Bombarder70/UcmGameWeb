@@ -27,6 +27,27 @@
         </div>
         <hr>
       </div>
+      <button 
+        v-if="!addQuestion"
+        @click="addQuestion = true" 
+        class='btn btn-success'
+      >Pridať novú otázku</button>
+      <div v-if="addQuestion" class="card">
+        <input v-model="newQuestion" type="text" placeholder="Zadajte otazku">
+        <button 
+          @click="addQuestionFunc()" 
+          class='btn btn-danger'
+        >Pridať</button>
+      </div>
+      <button 
+        @click="downloadJson()" 
+        class="btn mb-2 mb-md-0 btn-primary btn-block"
+      >
+        <span>Vygenerovať JSON súbor</span>
+        <div class="icon d-flex align-items-center justify-content-center">
+          <i class="fas fa-plus"></i>
+        </div>
+      </button>
     </div>
   </div>
 </template>
@@ -65,7 +86,9 @@ export default {
   data() {
     return {
       data: data,
-      newAnswer: ''
+      newAnswer: '',
+      newQuestion: "",
+      addQuestion: false,
     }
   },
   methods: {
@@ -87,6 +110,22 @@ export default {
           })
         }
       })
+    },
+    addQuestionFunc() {
+      this.addQuestion = false;
+      this.data.push({
+        "id": 99,
+        "otazka": this.newQuestion,
+        "typ": 1,
+        "odpovede": []
+      });
+
+      this.newQuestion = '';
+    },
+    downloadJson() {
+      f.windowOpen("generuj_json", {
+        data: this.data
+      });
     }
   }
 }
