@@ -2,13 +2,13 @@
 
 global $dia;
 
-$v = $dia->vue("CustomForm");
+$v = $dia->vue("Generator");
 
 $dia->template("
   <div class='container'>
-    <div class='card' style='background-color:yellow;'>
+    <div class='card'>
       <div class='card-body'>
-        <customForm></customForm>
+        <Generator></Generator>
       </div>
     </div>
   </div>
