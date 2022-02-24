@@ -6,6 +6,8 @@ $hraci = new \Component\TableLarge("users");
 $hraci->conditions([
   "order_by" => "score DESC"
 ]);
+$hraci->showSaveButton(false);
+$hraci->showDeleteButton(false);
 
 $dia->template("
   <div class='container mt-5'>
