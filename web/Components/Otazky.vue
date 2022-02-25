@@ -55,15 +55,6 @@
 <script>
 var data = [
   {
-    "id": 1,
-    "otazka": "Testovacia otazka cislo 1",
-    "typ": 1,
-    "odpovede": [
-      {"id": 1, "odpoved": "Ostrov"},
-      {"id": 2, "odpoved": "Lod"},
-    ]
-  },
-  {
     "id": 2,
     "otazka": "10 + 10 = ?",
     "typ": 1,
