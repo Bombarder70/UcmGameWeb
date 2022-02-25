@@ -131,7 +131,11 @@ export default {
       },
       (res) => {
         f.windowOpen("generuj_json", {
-          id: res.data
+          id: res.data,
+          reset: true,
+          unset: 'structure',
+          json: true,
+          return_only_data: true
         });
       })
     }
