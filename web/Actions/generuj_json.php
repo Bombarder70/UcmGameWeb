@@ -8,5 +8,16 @@ header("Content-Disposition: attachment; filename=test.json");
 header("Content-Transfer-Encoding: binary");
 header("Content-Type: binary/octet-stream");
 
-echo json_encode(['xxx'=> 'xxx']);
+$id = \Core\Controllers\WebController::getParam("id");
+
+$data = $db->dbSelect(
+  "generator",
+  [
+    "where" => [
+      "id" => $id
+    ]
+  ]
+);
+
+\Core\Controllers\WebController::getJson($data);
 die();

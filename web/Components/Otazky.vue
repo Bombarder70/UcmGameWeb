@@ -123,9 +123,17 @@ export default {
       this.newQuestion = '';
     },
     downloadJson() {
-      f.windowOpen("generuj_json", {
-        data: this.data
-      });
+      f.axiosPost('dia_insert', {
+        tableName: 'generator',
+        data: {
+          structure: this.data
+        }
+      },
+      (res) => {
+        f.windowOpen("generuj_json", {
+          id: res.data
+        });
+      })
     }
   }
 }
