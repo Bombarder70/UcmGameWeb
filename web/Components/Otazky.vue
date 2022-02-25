@@ -2,9 +2,15 @@
   <div class="custom-form">
     <div>
       <div v-for="item in data" :key="item">
-        <h2>Otázka č. {{ item.id }}</h2>
+        <b>#{{ item.id }}</b>
         <div>
-          {{ item.otazka }}
+          <h3>{{ item.otazka }}</h3>
+            <button
+              @click="deleteQuestion(item.id)"
+              class="btn btn-danger"
+              style="float:right;"
+            >Odstranit otazku</button>
+          Odpovede:
           <div v-if="item.typ == 1">
             <template v-for="odpoved in item.odpovede" :key="odpoved">
               <p class="lead">
@@ -99,6 +105,13 @@ export default {
               item['odpovede'].splice(index, 1);
             }
           })
+        }
+      })
+    },
+    deleteQuestion(questionId) {
+      this.data.forEach((item, index) => {
+        if (item.id == questionId) {
+          this.data.splice(index, 1);
         }
       })
     },
