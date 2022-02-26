@@ -6,7 +6,8 @@
           <button
             @click="deleteQuestion(item.id)"
             class="btn btn-danger"
-            style="float:right;"
+            style="float:right; margin-right:10px;margin-top:-43px"
+
           >Odstranit otazku</button>
         <div style="margin-left:10px">
           {{ item.otazka }}
