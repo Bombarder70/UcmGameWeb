@@ -3,6 +3,13 @@
   background-color: #a7a7a7 !important;
 
 */
+body{
+  background-image: url("background.png"); 
+}
+.card{
+  background-color: rgba(128,128,128,0.8) !important;
+  border: 0px solid rgba(0, 0, 0, 0.125) !important;
+}
 
 .bg-primary {
   background-color: #0a6c91 !important;
@@ -101,16 +108,7 @@
   background-color: #b5ebff;
 }
 
+
 i {
   color: #0a6c91;
-}
-#yourBtn {
-  font-family: calibri;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border: 1px dashed #BBB;
-  text-align: center;
-  background-color: #DDD;
-  cursor: pointer;
 }
