@@ -1,15 +1,17 @@
-<template>
+
+<template >
   <div class='row'>
-    <div class='col'>
+    <div class='col'> <!--dsafasf-->
       <button
         @click="show = 'json'"  
         class='btn btn-success'
+        style="margin-bottom:10px"
       >Nahrať JSON súbor</button>
     </div>
     <div class='col'>
       <button 
         @click="show = 'otazky'" 
-        class='btn btn-warning'
+        class='btn btn-warning' style="float:right"
       >Vytvoriť nové otázky</button>
     </div>
   </div>

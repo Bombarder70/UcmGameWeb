@@ -1,27 +1,29 @@
-<template>
+<template style="background-color:red !important">
   <div class="custom-form">
-    <div>
-      <div v-for="item in data" :key="item">
-        <b>#{{ item.id }}</b>
-        <div>
-          <h3>{{ item.otazka }}</h3>
-            <button
-              @click="deleteQuestion(item.id)"
-              class="btn btn-danger"
-              style="float:right;"
-            >Odstranit otazku</button>
-          Odpovede:
+    <div >
+      <div  v-for="item in data" :key="item">
+        <h2 style="margin-left:10px" >Otázka č. {{ item.id }}</h2>
+          <button
+            @click="deleteQuestion(item.id)"
+            class="btn btn-danger"
+            style="float:right;"
+          >Odstranit otazku</button>
+        <div style="margin-left:10px">
+          {{ item.otazka }}
           <div v-if="item.typ == 1">
-            <template v-for="odpoved in item.odpovede" :key="odpoved">
-              <p class="lead">
-                <b>{{ odpoved.odpoved }}</b>
+            <template  v-for="odpoved in item.odpovede" :key="odpoved">
+              <p  class="lead"  >
+                <b >{{ odpoved.odpoved }}</b>
+          
                 <button
+                style=" display: block; margin-right:10px;  margin-top:-40px;margin-left:95%;"
                   @click="deleteAnswer(item.id, odpoved.id)"
                   class="btn btn-warning"
-                  style="float:right;"
+                  
                 >
                   <i class="fas fa-trash-alt"></i>
                 </button>
+               
               </p>
             </template>
             <input v-model="newAnswer"/>
@@ -36,16 +38,17 @@
       <button 
         v-if="!addQuestion"
         @click="addQuestion = true" 
-        class='btn btn-success'
+        class='btn btn-success' style="margin-left:10px"
       >Pridať novú otázku</button>
       <div v-if="addQuestion" class="card">
         <input v-model="newQuestion" type="text" placeholder="Zadajte otazku">
         <button 
           @click="addQuestionFunc()" 
           class='btn btn-danger'
+          
         >Pridať</button>
       </div>
-      <button 
+      <button style="margin-top:10px"
         @click="downloadJson()" 
         class="btn mb-2 mb-md-0 btn-primary btn-block"
       >
@@ -60,6 +63,15 @@
 
 <script>
 var data = [
+  {
+    "id": 1,
+    "otazka": "Testovacia otazka cislo 1",
+    "typ": 1,
+    "odpovede": [
+      {"id": 1, "odpoved": "Ostrov"},
+      {"id": 2, "odpoved": "Lod"},
+    ]
+  },
   {
     "id": 2,
     "otazka": "10 + 10 = ?",
