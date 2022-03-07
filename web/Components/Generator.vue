@@ -1,6 +1,7 @@
 
 <template >
-  <div class='row'>
+
+  <div class='row' >
     <div class='col'> <!--dsafasf-->
       <button
         @click="show = 'json'"  
@@ -11,14 +12,14 @@
     <div class='col'>
       <button 
         @click="show = 'otazky'" 
-        class='btn btn-warning' style="float:right"
+        class='btn btn-success' style="float:right"
       >Vytvoriť nové otázky</button>
     </div>
   </div>
   <div v-if="show == 'otazky'" class='card'>
     <otazky></otazky>
   </div>
-  <div v-else-if="show == 'json'" class='card'>
+  <div  style="background-color:transparent !important" v-else-if="show == 'json'" class='card' >
     <file-uploader></file-uploader>
   </div>
 </template>

@@ -3,13 +3,57 @@
   background-color: #a7a7a7 !important;
 
 */
+
+#yourBtn{
+  background-color: #FFAE42; /* Green */
+  border: 1px solid #1b7531;
+  color: white;
+  padding: 12px 64px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yourBtn:hover{
+  background-color: #FFAE42	; /* Green */
+  border: 1px solid black;
+  color: black;
+  padding: 12px 64px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.page-link{
+margin-right: 50px;
+
+}
 body{
   background-image: url("background.png"); 
+  max-width: 100%;
+  height: auto;
+
+  background-repeat: no-repeat;
+  color:white !important;
+  
+}
+.responsive{
+  max-width: 100%;
+  height: auto;
+
+  background-repeat: no-repeat;
 }
 .card{
+ 
   background-color: rgba(128,128,128,0.8) !important;
   border: 0px solid rgba(0, 0, 0, 0.125) !important;
 }
+
 
 .bg-primary {
   background-color: #0a6c91 !important;
@@ -74,14 +118,19 @@ body{
   color: #8f271e !important;
 }
 .btn-warning {
-  background-color: #fcde67 !important;
+  background-color: #ff988f !important;
+  border: 0px solid rgba(25, 23, 84, 1);
+  color: white !important;
 }
+
 .btn-primary {
   background-color: #0a6c91 !important;
 }
 .btn-secondary {
-  background-color: #5bccf6 !important;
+  background-color: #0a6c91 !important;
+  border-color: #5bccf6 !important;
 }
+
 .btn-limet {
   background-color: rgba(84, 57, 23, 0.3) !important;
   border: 1px solid rgba(84, 57, 23, 1);
@@ -110,5 +159,13 @@ body{
 
 
 i {
-  color: #0a6c91;
+  color: white;
+}
+
+.table{
+  color:white !important;
+}
+
+.table:hover{
+  color:white !important;
 }

@@ -1,23 +1,23 @@
 <template style="background-color:red !important">
-  <div class="custom-form">
+  <div class="custom-form" >
     <div >
       <div  v-for="item in data" :key="item">
-        <h2 style="margin-left:10px" >Otázka č. {{ item.id }}</h2>
+        <h2 style="margin-left:10px; " >Otázka č. {{ item.id }}</h2>
           <button
             @click="deleteQuestion(item.id)"
             class="btn btn-danger"
             style="float:right; margin-right:10px;margin-top:-43px"
 
-          >Odstranit otazku</button>
-        <div style="margin-left:10px">
+          >Odstrániť otázku</button>
+        <div style="margin-left:10px; font-size:22px">
           {{ item.otazka }}
-          <div v-if="item.typ == 1">
+          <div v-if="item.typ == 1"><br>
             <template  v-for="odpoved in item.odpovede" :key="odpoved">
               <p  class="lead"  >
                 <b >{{ odpoved.odpoved }}</b>
           
                 <button
-                style=" display: block; margin-right:10px;  margin-top:-40px;margin-left:95%;"
+                style=" display: block; margin-right:10px; padding: 8px 12px;  margin-top:-30px; margin-left:31%;"
                   @click="deleteAnswer(item.id, odpoved.id)"
                   class="btn btn-warning"
                   
@@ -49,7 +49,7 @@
           
         >Pridať</button>
       </div>
-      <button style="margin-top:10px"
+      <button style="margin-top:10px; width:35%;margin-left:32.5%;"
         @click="downloadJson()" 
         class="btn mb-2 mb-md-0 btn-primary btn-block"
       >
