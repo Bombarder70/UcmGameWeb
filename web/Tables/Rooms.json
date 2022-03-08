@@ -1,0 +1,13 @@
+{
+  "uid": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "Názov miestnosti"
+	},
+  "active": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "Aktívne",
+    "type": "checkbox"
+	}
+}
