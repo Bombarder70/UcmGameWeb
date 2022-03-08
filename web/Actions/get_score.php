@@ -3,7 +3,7 @@
   global $db;
 
   $response = $db->dbSelect(
-    "users",
+    "players",
     [
       "where" => [
         "id" => 1 // Nas pirat2

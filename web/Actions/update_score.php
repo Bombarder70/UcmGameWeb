@@ -5,7 +5,7 @@
   $data = \Core\Controllers\WebController::getPostParams();
 
   $db->update(
-    tableName: "users",
+    tableName: "players",
     rowId: 1,
     data: $data
   );

@@ -2,7 +2,7 @@
 
 global $dia;
 
-$hraci = new \Component\TableLarge("users");
+$hraci = new \Component\TableLarge("players");
 $hraci->conditions([
   "order_by" => "score DESC"
 ]);
