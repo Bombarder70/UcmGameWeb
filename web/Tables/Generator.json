@@ -1,0 +1,8 @@
+{
+  "structure": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "JSON",
+    "type": "text"
+	}
+}

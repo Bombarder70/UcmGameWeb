@@ -8,6 +8,15 @@
 		"show_in_table":  true,
 		"show_in_form": true, 
 		"name_in_table": "Aktívne",
-    "type": "checkbox"
+    "type": "checkbox",
+    "default_value": 1
+	},
+  "id_user": {
+		"show_in_table":  true,
+		"show_in_form": true, 
+		"name_in_table": "Aktívne",
+    "type": "number",
+    "default_value": 1,
+    "readonly_in_edit": true
 	}
 }
