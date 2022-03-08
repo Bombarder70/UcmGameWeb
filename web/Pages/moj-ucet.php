@@ -7,6 +7,9 @@ $rooms->buttons([
 ]);
 
 $pridat = new \Component\Row("rooms");
+$pridat->defaultValues([
+  'id_user' => \Core\Controllers\UserController::getLogged()['id']
+]);
 
 $dia->template("
   <div class='mt-5'>

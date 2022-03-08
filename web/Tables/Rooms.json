@@ -7,7 +7,7 @@
   "id_user": {
 		"show_in_table":  false,
 		"show_in_form": false, 
-    "default_value": 1,
+		"readonly_in_new": true,
     "type": "number"
 	}
 }

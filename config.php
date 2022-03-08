@@ -39,6 +39,7 @@
   $config['dir']['admin'] = "{$config['dir']['root']}/web/{$config['web']['admin']}";
 
   $config['urls'] = [
+    "rooms" => "moj-ucet"
   ];
 
 ?>
