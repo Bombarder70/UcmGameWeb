@@ -49,14 +49,14 @@ body{
   background-repeat: no-repeat;
 }
 .card{
- 
-  background-color: rgba(128,128,128,0.8) !important;
+  background-color: #fcba03 !important;
+  opacity: 0.95;
   border: 0px solid rgba(0, 0, 0, 0.125) !important;
 }
 
 
 .bg-primary {
-  background-color: #0a6c91 !important;
+  background-color: #20b031 !important;
 }
 /*.bg-primary {
   background-color: #fcde67 !important;
@@ -75,7 +75,7 @@ body{
 }
 
 .color-primary {
-  color: #0a6c91 !important;
+  color: #20b031 !important;
 }
 .color-secondary {
   color: #5bccf6 !important;
@@ -124,10 +124,10 @@ body{
 }
 
 .btn-primary {
-  background-color: #0a6c91 !important;
+  background-color: #20b031 !important;
 }
 .btn-secondary {
-  background-color: #0a6c91 !important;
+  background-color: #20b031 !important;
   border-color: #5bccf6 !important;
 }
 
@@ -163,9 +163,24 @@ i {
 }
 
 .table{
-  color:white !important;
+  color: #20b031 !important;
+  font-weight: 700;
+  font-size: 18px;
 }
 
-.table:hover{
-  color:white !important;
+.table tr:hover {
+  font-size: 22px !important;
+  color: #b31b1b !important;
+  animation-duration: 1s !important;
+}
+
+.page-link {
+  background-color: #20b031 !important;
+  color: white;
+}
+
+.col-form-label {
+  font-weight: 700;
+  color: #20b031 !important;
+  font-size: 18px;
 }
