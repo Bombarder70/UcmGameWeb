@@ -1,6 +1,8 @@
 <?php
 
 $profileView = new Component\ProfileView("users");
+$profileView->showEdit(false);
+
 $rooms = new \Component\TableLarge("rooms");
 $rooms->buttons([
   ["name" => "Generátor otázok", "link" => "otazky&idRoom=1", "class" => "btn btn-primary"],
