@@ -203,7 +203,8 @@ i {
 }
 .statistky .table tbody > tr:nth-child(1) {
   box-shadow: 0px 0px 20px 2px #FFAE42 !important;
-  background-color: #FFAE42;
+  background-color: rgba(255, 174, 66, 0.8);
+  opacity: 0.8;
   color: #4a4a4a;
 }
 
