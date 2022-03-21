@@ -37,7 +37,7 @@ body{
   background-image: url("skeletons.png"); 
   height: 100%;
   background-position: center;
-  background-repeat: repeat-y;
+  background-attachment: fixed;
   background-size: cover;
   height: 1050px;
   font-family: "Comic Sans MS";
@@ -132,15 +132,30 @@ body{
 }
 
 .btn-limet {
-  background-color: rgba(84, 57, 23, 0.3) !important;
+  background-color: rgba(255, 174, 66, 0.7) !important;
   border: 1px solid rgba(84, 57, 23, 1);
+  font-size: 30px;
 }
 .btn-limet i {
   color: rgba(84, 57, 23, 0.3) !important;
 }
 .btn-purple {
-  background-color: rgba(25, 23, 84, 0.3) !important;
-  border: 1px solid rgba(25, 23, 84, 1);
+  background-color: #2654c9 !important;
+  border: 1px solid #2654c9;
+  font-size: 26px;
+  color: #fff;
+}
+.btn-purple:hover {
+  color: #fff;
+  text-shadow:
+  0 0 7px blue,
+  0 0 10px blue,
+  0 0 21px blue,
+  0 0 42px blue,
+  0 0 82px blue,
+  0 0 92px blue,
+  0 0 102px blue,
+  0 0 151px blue;
 }
 .btn-purple i {
   color: rgba(25, 23, 84, 0.3) !important;
@@ -304,4 +319,23 @@ i {
   0 0 92px #35c229,
   0 0 102px #35c229,
   0 0 151px #35c229;
+}
+
+.row h2 {
+  font-family: "Comic Sans MS" !important;
+  font-size: 25px;
+  text-shadow: 1px 1px black !important;
+}
+
+.delete-answer:hover {
+  text-shadow:
+  0 0 7px #c90c0c,
+  0 0 10px #c90c0c,
+  0 0 21px #c90c0c,
+  0 0 42px #c90c0c,
+  0 0 82px #c90c0c,
+  0 0 92px #c90c0c,
+  0 0 102px #c90c0c,
+  0 0 151px #c90c0c;
+
 }

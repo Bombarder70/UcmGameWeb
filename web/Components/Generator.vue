@@ -16,7 +16,7 @@
       >Vytvoriť nové otázky</button>
     </div>
   </div>
-  <div v-if="show == 'otazky'" class='card'>
+  <div v-if="show == 'otazky'">
     <otazky></otazky>
   </div>
   <div  style="background-color:transparent !important" v-else-if="show == 'json'" class='card' >
