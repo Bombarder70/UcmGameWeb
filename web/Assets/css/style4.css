@@ -34,13 +34,12 @@ margin-right: 50px;
 
 }
 body{
-  background-image: url("background.png"); 
-  max-width: 100%;
-  height: auto;
-
+  background-image: url("skeletons.png"); 
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  color:white !important;
-  
+  background-size: cover;
+  height: 1050px;
 }
 .responsive{
   max-width: 100%;
@@ -49,14 +48,14 @@ body{
   background-repeat: no-repeat;
 }
 .card{
-  background-color: #fcba03 !important;
+  background-color: #fff !important;
   opacity: 0.95;
   border: 0px solid rgba(0, 0, 0, 0.125) !important;
 }
 
 
 .bg-primary {
-  background-color: #20b031 !important;
+  background-color: #58a637 !important;
 }
 /*.bg-primary {
   background-color: #fcde67 !important;
@@ -75,7 +74,7 @@ body{
 }
 
 .color-primary {
-  color: #20b031 !important;
+  color: #58a637 !important;
 }
 .color-secondary {
   color: #5bccf6 !important;
@@ -124,10 +123,10 @@ body{
 }
 
 .btn-primary {
-  background-color: #20b031 !important;
+  background-color: #58a637 !important;
 }
 .btn-secondary {
-  background-color: #20b031 !important;
+  background-color: #58a637 !important;
   border-color: #5bccf6 !important;
 }
 
@@ -163,24 +162,75 @@ i {
 }
 
 .table{
-  color: #20b031 !important;
+  color: #58a637 !important;
   font-weight: 700;
   font-size: 18px;
 }
 
 .table tr:hover {
-  font-size: 22px !important;
-  color: #b31b1b !important;
+  font-size: 20px !important;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px 2px rgba(56, 201, 12,0.7);
   animation-duration: 1s !important;
+}
+.statistky .table tbody > tr:nth-child(1) {
+  box-shadow: 0px 0px 20px 2px #FFAE42 !important;
+  background-color: #FFAE42;
+  color: #4a4a4a;
 }
 
 .page-link {
-  background-color: #20b031 !important;
+  background-color: #58a637 !important;
   color: white;
 }
 
 .col-form-label {
   font-weight: 700;
-  color: #20b031 !important;
+  color: #58a637 !important;
   font-size: 18px;
+}
+
+.gold-a {
+  color: #FFAE42;
+  font-size: 20px;
+  font-weight: 600;
+}
+.gold-a i {
+  color: #FFAE42;
+}
+.gold-a:hover {
+  color: #FFAE42 !important;
+  font-size: 22px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #FFAE42,
+    0 0 82px #FFAE42,
+    0 0 92px #FFAE42,
+    0 0 102px #FFAE42,
+    0 0 151px #FFAE42;
+}
+.red-a {
+  color: #c90c0c;
+  font-size: 20px;
+  font-weight: 600;
+}
+.red-a i {
+  color: #c90c0c;
+}
+.red-a:hover {
+  color: #c90c0c !important;
+  font-size: 22px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #c90c0c,
+    0 0 82px #c90c0c,
+    0 0 92px #c90c0c,
+    0 0 102px #c90c0c,
+    0 0 151px #c90c0c;
 }
