@@ -19,7 +19,7 @@
   $config['web']['includes']    = "Includes";
   $config['web']['pages']       = "Pages";
   $config['web']['actions']     = "Actions";
-  $config['web']['home']        = "home";
+  $config['web']['home']        = "domov";
   $config['web']['files']       = "files";
   $config['web']['notfound']    = "404";
   $config['web']['bootstrap']   = TRUE;

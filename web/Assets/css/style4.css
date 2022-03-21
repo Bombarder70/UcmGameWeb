@@ -40,6 +40,7 @@ body{
   background-repeat: repeat-y;
   background-size: cover;
   height: 1050px;
+  font-family: "Comic Sans MS";
 }
 .responsive{
   max-width: 100%;
@@ -233,4 +234,74 @@ i {
     0 0 92px #c90c0c,
     0 0 102px #c90c0c,
     0 0 151px #c90c0c;
+}
+
+.welcome h1 {
+  font-family: "Comic Sans MS";
+  font-size: 60px;
+  text-shadow: 5px 2px black;
+  cursor: none;
+}
+.welcome h1.red-h1 {
+  color: #c90c0c;
+}
+.welcome h1.gold-h1 {
+  color: #FFAE42;
+}
+.welcome h1.blue-h1 {
+  color: #2654c9;
+}
+.welcome h1.green-h1 {
+  color: #35c229;
+}
+.rot-5-l {
+  transform: rotate(-5deg);
+}
+.rot-5-r {
+  transform: rotate(+5deg);
+}
+
+.welcome h1.red-h1:hover {
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #c90c0c,
+  0 0 82px #c90c0c,
+  0 0 92px #c90c0c,
+  0 0 102px #c90c0c,
+  0 0 151px #c90c0c;
+}
+.welcome h1.gold-h1:hover {
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #FFAE42,
+  0 0 82px #FFAE42,
+  0 0 92px #FFAE42,
+  0 0 102px #FFAE42,
+  0 0 151px #FFAE42;
+}
+.welcome h1.blue-h1:hover {
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #2654c9,
+  0 0 82px #2654c9,
+  0 0 92px #2654c9,
+  0 0 102px #2654c9,
+  0 0 151px #2654c9;
+}
+.welcome h1.green-h1:hover {
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #35c229,
+  0 0 82px #35c229,
+  0 0 92px #35c229,
+  0 0 102px #35c229,
+  0 0 151px #35c229;
 }

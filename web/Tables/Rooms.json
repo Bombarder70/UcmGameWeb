@@ -8,6 +8,6 @@
 		"show_in_table":  false,
 		"show_in_form": false, 
 		"readonly_in_new": true,
-    "type": "number"
+    "type": "hidden"
 	}
 }
