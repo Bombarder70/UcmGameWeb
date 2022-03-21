@@ -4,26 +4,42 @@
 
   $data = \Core\Controllers\WebController::getPostParams();
 
+  $idGenerator = 1;
+
+  // Vyber konkrtneho hraca
+  $players = $db->dbSelect(
+    "players",
+    [
+      "where" => [
+        "nickname" => $data["playerNickname"]
+      ]
+    ]
+  );
+
+  $player = reset($players);
+
+  // Vyber struktury
+  $playersGenerators = $db->dbSelect(
+    "players_generators",
+    [
+      "where" => [
+        "id_player" => $player["id"],
+        "id_generator" => $idGenerator
+      ]
+    ]
+  );
+
+  $playersCurrentQuests = reset($playersGenerators);
+
   $db->update(
     tableName: "players",
-    rowId: 1,
+    rowId: $player["id"],
     data: [
       "score" => $data["score"]
     ]
   );
 
-  $response = $db->dbSelect(
-    "generator",
-    [
-      "where" => [
-        "id" => 1 // testovacie
-      ]
-    ]
-  );
-
-  $response = reset($response);
-
-  $otazky = (array)json_decode($response['structure']);
+  $otazky = (array)json_decode($playersCurrentQuests['structure']);
 
   foreach ($otazky["quests"] as $key => $otazka) {
     if ($otazka->zobrazena == false) {
@@ -34,8 +50,8 @@
   }
 
   $db->update(
-    tableName: "generator",
-    rowId: 1,
+    tableName: "players_generators",
+    rowId: $playersCurrentQuests["id"],
     data: [
       "structure" => json_encode($otazky),
     ]
