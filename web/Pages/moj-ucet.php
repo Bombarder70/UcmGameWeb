@@ -3,7 +3,7 @@
 $profileView = new Component\ProfileView("users");
 $rooms = new \Component\TableLarge("rooms");
 $rooms->buttons([
-  ["name" => "Generátor otázok", "link" => "otazky", "class" => "btn btn-primary"],
+  ["name" => "Generátor otázok", "link" => "otazky&idRoom=1", "class" => "btn btn-primary"],
 ]);
 
 $pridat = new \Component\Row("rooms");
