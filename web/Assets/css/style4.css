@@ -29,10 +29,6 @@
   border-radius: 5px;
   font-size: 16px;
 }
-.page-link{
-margin-right: 50px;
-
-}
 body{
   background-image: url("skeletons.png"); 
   height: 100%;
@@ -209,8 +205,23 @@ i {
 }
 
 .page-link {
-  background-color: #58a637 !important;
+  background-color: none !important;
   color: white;
+  margin: 5px;
+  border: none;
+  color: #FFAE42;
+}
+.page-link:hover {
+  color: #58a637;
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #58a637,
+  0 0 82px #58a637,
+  0 0 92px #58a637,
+  0 0 102px #58a637,
+  0 0 151px #58a637;
 }
 
 .col-form-label {
@@ -350,5 +361,4 @@ i {
   0 0 92px #c90c0c,
   0 0 102px #c90c0c,
   0 0 151px #c90c0c;
-
 }
