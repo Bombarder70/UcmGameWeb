@@ -22,9 +22,9 @@
     "readonly": "true"
 	},
 	"last_played": {
-		"show_in_table":  true,
+		"show_in_table":  false,
 		"show_in_form": true,
-		"name_in_table": "Naposledny aktívny",
+		"name_in_table": "Naposledy aktívny",
 		"required": true,
     "readonly": "true"
 	}
