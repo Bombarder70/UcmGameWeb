@@ -32,9 +32,9 @@
   $playersCurrentQuests = reset($playersGenerators);
 
   $db->update(
-    tableName: "players",
-    rowId: $player["id"],
-    data: [
+    "players",
+    $player["id"],
+    [
       "score" => $data["score"]
     ]
   );
@@ -50,9 +50,9 @@
   }
 
   $db->update(
-    tableName: "players_generators",
-    rowId: $playersCurrentQuests["id"],
-    data: [
+    "players_generators",
+    $playersCurrentQuests["id"],
+    [
       "structure" => json_encode($otazky),
     ]
   );
