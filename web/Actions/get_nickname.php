@@ -21,6 +21,4 @@
     ]
   );*/
 
-  $playerData = $db->getLastItem("players");
-
-  echo $playerData['score'];
+  echo "Player_" . ($lastPlayerId + 1);
