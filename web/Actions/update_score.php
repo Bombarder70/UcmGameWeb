@@ -47,7 +47,7 @@
     }
   }
 
-  if ((bool)$data["spravnost"]) {
+  if ($data["spravnost"] == 1) {
     $playersCurrentQuests["score"] += 100;
     $playersCurrentQuests["correct_answers"] += 1;
   } else {
