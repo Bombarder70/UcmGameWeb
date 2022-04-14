@@ -28,7 +28,8 @@
       'table' => "players",
       'table_data' => [
         "nickname" => $data["playerNickname"],
-        "uid" => $data["uid"] != "" ? $data["uid"] : "UNKNOWN"
+        "uid" => $data["uid"] != "" ? $data["uid"] : "UNKNOWN",
+        "score" => 50
       ]
     ]);
 
@@ -46,7 +47,7 @@
         exit();
       }
     }
-    
+
     echo json_encode([
       "status" => "fail",
       "message" => "This player name already exists"
