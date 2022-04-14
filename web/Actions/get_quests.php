@@ -1,14 +1,21 @@
 <?php
 
-  global $db;
+  /**
+   * Patrik Holeš
+   * GET 
+   * @param string idGenerator
+   * @param string playerNickname
+   * @return Object 
+   * curl -X GET -G http://localhost/holes/pirate-game/web/index.php?action=get_quests -d idGenerator=1 -d playerNickname=Pirat-2
+  */
 
-  $idGenerator = 1; // testovacie
+  global $db;
 
   $response = $db->dbSelect(
     "generator",
     [
       "where" => [
-        "id" => $idGenerator // testovacie
+        "id" => \Core\Controllers\WebController::getParam("idGenerator")
       ]
     ]
   );
@@ -33,7 +40,8 @@
     [
       "where" => [
         "id_player" => $player["id"],
-        "id_generator" => $idGenerator
+        "id_generator" => \Core\Controllers\WebController::getParam("idGenerator"),
+        "is_completed" => 0
       ]
     ]
   );
@@ -44,7 +52,7 @@
       'table' => "players_generators",
       'table_data' => [
         "id_player" => $player["id"],
-        "id_generator" => $idGenerator,
+        "id_generator" => \Core\Controllers\WebController::getParam("idGenerator"),
         "structure" => $response['structure']
       ]
     ]);
@@ -54,5 +62,7 @@
     $playerCurrentQuests = reset($playersGenerators);
   }
 
-
-  echo $playerCurrentQuests['structure'];
+  echo json_encode([
+    "idPlayerGenerator" => $playerCurrentQuests["id"],
+    "structure" => $playerCurrentQuests['structure']
+  ]);
