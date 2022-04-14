@@ -1,30 +1,24 @@
 <?php
 
+  /**
+   * Patrik Holeš
+   * POST
+   * @param int idGenerator
+   * @param int spravnost
+   * @return int is_completed 
+   * curl -X POST -F idPlayerGenerator=8 -F spravnost=1 http://localhost/holes/pirate-game/web/index.php?action=update_score
+  */
+
   global $db;
 
   $data = \Core\Controllers\WebController::getPostParams();
-
-  $idGenerator = 1;
-
-  // Vyber konkrtneho hraca
-  $players = $db->dbSelect(
-    "players",
-    [
-      "where" => [
-        "nickname" => $data["playerNickname"]
-      ]
-    ]
-  );
-
-  $player = reset($players);
 
   // Vyber struktury
   $playersGenerators = $db->dbSelect(
     "players_generators",
     [
       "where" => [
-        "id_player" => $player["id"],
-        "id_generator" => $idGenerator
+        "id" => $data["idPlayerGenerator"]
       ]
     ]
   );
@@ -56,7 +50,7 @@
 
   $db->update(
     "players_generators",
-    $playersCurrentQuests["id"],
+    $data["idPlayerGenerator"],
     [
       "structure" => json_encode($otazky),
       "score" => $playersCurrentQuests["score"],
@@ -65,6 +59,28 @@
       "is_completed" => $isCompleted
     ]
   );
+  
+  if ($isCompleted) {
+    // Update tabulku players
+    $players = $db->dbSelect(
+      "players",
+      [
+        "where" => [
+          "id" => $playersCurrentQuests["id_player"]
+        ]
+      ]
+    );
+
+    $players = reset($players);
+
+    $db->update(
+      "players",
+      $playersCurrentQuests["id_player"],
+      [
+        "score" => $players["score"] + $playersCurrentQuests["score"]
+      ]
+    );
+  }
 
   echo $isCompleted;
 
