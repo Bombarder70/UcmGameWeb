@@ -33,9 +33,20 @@
     ]);
 
     echo json_encode([
-      "status" => "success"
+      "status" => "success",
+      "message" => "created new player"
     ]);
   } else {
+    foreach ($players as $player) {
+      if ($player["uid"] == $data["uid"]) {
+        echo json_encode([
+          "status" => "success",
+          "message" => "Already exists on this PC"
+        ]);
+        exit();
+      }
+    }
+    
     echo json_encode([
       "status" => "fail",
       "message" => "This player name already exists"
