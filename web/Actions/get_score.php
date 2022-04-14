@@ -4,15 +4,17 @@ global $db;
 
 $playerNickname = \Core\Controllers\WebController::getPostParam("playerNickname");
 
-$player = $db->dbSelect(
-  "players",
-  [
-    "where" => [
-      "nickname" => $playerNickname
+if ($playerNickname != "") {
+  $player = $db->dbSelect(
+    "players",
+    [
+      "where" => [
+        "nickname" => $playerNickname
+      ]
     ]
-  ]
-);
+  );
 
-$player = reset($player);
+  $player = reset($player);
 
-echo $player["score"];
+  echo $player["score"];
+} else echo 50;
