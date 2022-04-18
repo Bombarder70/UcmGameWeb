@@ -1,15 +1,14 @@
 
 <template >
-
-  <div class='row' >
-    <div class='col'> <!--dsafasf-->
+  <div class='row mb-2' >
+    <!--<div class='col'>
       <button
         @click="show = 'json'"  
         class='btn btn-success'
         style="margin-bottom:10px"
       >Nahrať JSON súbor</button>
-    </div>
-    <div class='col'>
+    </div>-->
+    <div class='col-12'>
       <button 
         @click="show = 'otazky'" 
         class='btn btn-success' style="float:right"

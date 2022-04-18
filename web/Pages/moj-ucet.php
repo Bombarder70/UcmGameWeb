@@ -5,7 +5,7 @@ $profileView->showEdit(false);
 
 $rooms = new \Component\TableLarge("rooms");
 $rooms->buttons([
-  ["name" => "Generátor otázok", "link" => "otazky&idRoom=1", "class" => "btn btn-primary"],
+  ["name" => "Generátor otázok", "customLink" => "index.php?webPage=otazky&idRoom=1", "class" => "btn btn-primary"],
 ]);
 
 $pridat = new \Component\Row("rooms");
