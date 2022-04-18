@@ -13,7 +13,7 @@
   $config['dir']['web']         = dirname(__FILE__) . "/web/";
 
   $config['hostweb']            = "web";
-  $config['host']               = $_SERVER['HTTP_HOST'] . "/holes/UcmGameWeb";
+  $config['host']               = $_SERVER['HTTP_HOST'] . "/holes/pirate-game";
 
   // NASTAVENIA DIE
   $config['web']['includes']    = "Includes";
