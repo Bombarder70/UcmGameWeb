@@ -1,6 +1,6 @@
 <?php
 
-$idRoom = \Core\Controllers\WebController::getParam("idRoom");
+$idRoom = \Core\Controllers\WebController::getParam("previous_page_id_form");
 
 $v = $dia->vue("Generator");
 
