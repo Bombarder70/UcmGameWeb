@@ -3,7 +3,7 @@
   /**
    * Patrik Holeš
    * POST
-   * @param int idGenerator
+   * @param int idPlayerGenerator
    * @param int spravnost
    * @return int is_completed 
    * curl -X POST -F idPlayerGenerator=8 -F spravnost=1 http://localhost/holes/pirate-game/web/index.php?action=update_score
