@@ -60,27 +60,27 @@
     ]
   );
   
-  if ($isCompleted) {
-    // Update tabulku players
-    $players = $db->dbSelect(
-      "players",
-      [
-        "where" => [
-          "id" => $playersCurrentQuests["id_player"]
-        ]
+ 
+  // Update tabulku players
+  $players = $db->dbSelect(
+    "players",
+    [
+      "where" => [
+        "id" => $playersCurrentQuests["id_player"]
       ]
-    );
+    ]
+  );
 
-    $players = reset($players);
+  $players = reset($players);
 
-    $db->update(
-      "players",
-      $playersCurrentQuests["id_player"],
-      [
-        "score" => $players["score"] + $playersCurrentQuests["score"]
-      ]
-    );
-  }
+  $db->update(
+    "players",
+    $playersCurrentQuests["id_player"],
+    [
+      "score" => $players["score"] + $playersCurrentQuests["score"]
+    ]
+  );
+
 
   echo $isCompleted;
 
