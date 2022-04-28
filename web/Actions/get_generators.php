@@ -36,6 +36,7 @@ if (!empty($rooms)) {
 
 echo json_encode([
   "status" => $status,
+  "idRoom" => isset($room) ? $room["id"] : 1,
   "data" => $generators
 ]);
 
