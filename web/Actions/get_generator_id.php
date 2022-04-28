@@ -62,7 +62,8 @@ if (!empty($playersGenerators)) {
     "idGenerator" => $playerGenerator["id_generator"],
     "lastPositionX" => $lastPosition[0],
     "lastPositionY" => $lastPosition[1],
-    "lastPositionZ" => $lastPosition[2]
+    "lastPositionZ" => $lastPosition[2],
+    "killedSkeletons" => $playerGenerator["killed_skeletons"]
   ];
 } else {
   $idPlayerGenerator = $db->insert_array([
@@ -80,7 +81,8 @@ if (!empty($playersGenerators)) {
     "idGenerator" => $generators["id"],
     "lastPositionX" => 0,
     "lastPositionY" => 0,
-    "lastPositionZ" => 0
+    "lastPositionZ" => 0,
+    "killedSkeletons" => 0
   ];
 }
 
