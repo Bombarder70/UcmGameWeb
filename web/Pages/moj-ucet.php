@@ -3,9 +3,11 @@
 $profileView = new Component\ProfileView("users");
 $profileView->showEdit(false);
 
+$idRoom = \Core\Controllers\WebController::getParam("id_form");
+
 $rooms = new \Component\TableLarge("rooms");
 $rooms->buttons([
-  ["name" => "Generátor otázok", "customLink" => "index.php?webPage=otazky&idRoom=1", "class" => "btn btn-primary"],
+  ["name" => "Generátor otázok", "link" => "index.php?webPage=otazky&idRoom=1", "class" => "btn btn-primary"],
 ]);
 
 $pridat = new \Component\Row("rooms");

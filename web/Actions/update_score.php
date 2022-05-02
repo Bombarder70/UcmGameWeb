@@ -3,7 +3,7 @@
   /**
    * Patrik Holeš
    * POST
-   * @param int idGenerator
+   * @param int idPlayerGenerator
    * @param int spravnost
    * @return int is_completed 
    * curl -X POST -F idPlayerGenerator=8 -F spravnost=1 http://localhost/holes/pirate-game/web/index.php?action=update_score
@@ -60,27 +60,27 @@
     ]
   );
   
-  if ($isCompleted) {
-    // Update tabulku players
-    $players = $db->dbSelect(
-      "players",
-      [
-        "where" => [
-          "id" => $playersCurrentQuests["id_player"]
-        ]
+ 
+  // Update tabulku players
+  $players = $db->dbSelect(
+    "players",
+    [
+      "where" => [
+        "id" => $playersCurrentQuests["id_player"]
       ]
-    );
+    ]
+  );
 
-    $players = reset($players);
+  $players = reset($players);
 
-    $db->update(
-      "players",
-      $playersCurrentQuests["id_player"],
-      [
-        "score" => $players["score"] + $playersCurrentQuests["score"]
-      ]
-    );
-  }
+  $db->update(
+    "players",
+    $playersCurrentQuests["id_player"],
+    [
+      "score" => $players["score"] + $playersCurrentQuests["score"]
+    ]
+  );
+
 
   echo $isCompleted;
 

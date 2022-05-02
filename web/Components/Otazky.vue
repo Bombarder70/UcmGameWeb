@@ -158,7 +158,7 @@ export default {
     downloadJson() {
       f.axiosPost('pridat_json', {
         tableName: 'generator',
-        idRoom: f.getUrlParam("idRoom"),
+        idRoom: f.getUrlParam("previous_page_id_form"),
         name: this.name,
         data: this.data
       },

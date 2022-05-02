@@ -1,17 +1,21 @@
 <?php
 
-$idRoom = \Core\Controllers\WebController::getParam("idRoom");
+$idGenerator = \Core\Controllers\WebController::getParam("previous_page_id_form");
 
 $v = $dia->vue("Generator");
 
 $otazky = new \Component\TableLarge("generator");
 $otazky->conditions([
   "where" => [
-    "id_room" => $idRoom
+    "id_room" => $idGenerator
   ]
 ]);
 $otazky->buttons([
+<<<<<<< HEAD
   ["name" => "Zobraziť hráčov", "customLink" => "hraci", "class" => "btn btn-primary"],
+=======
+  ["name" => "Tabuľka hráčov", "link" => "index.php?webPage=tabulka-hracov&idGenerator={$idGenerator}", "class" => "btn btn-primary"],
+>>>>>>> cf13fe6f64276eb0242d394376a301cec181016f
 ]);
 
 $dia->template("
