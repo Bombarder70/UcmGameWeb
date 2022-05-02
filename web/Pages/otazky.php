@@ -10,6 +10,9 @@ $otazky->conditions([
     "id_room" => $idRoom
   ]
 ]);
+$otazky->buttons([
+  ["name" => "Zobraziť hráčov", "customLink" => "hraci", "class" => "btn btn-primary"],
+]);
 
 $dia->template("
   <div class='container'>

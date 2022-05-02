@@ -42,4 +42,6 @@
     "rooms" => "moj-ucet"
   ];
 
+  $config['core']             = $_SERVER['DOCUMENT_ROOT'] . "/holes/Core";
+
 ?>

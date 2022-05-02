@@ -7,7 +7,8 @@
   session_start();
   ob_start();
 
-  require_once __DIR__ . '/../Core/boot.php';
+  require_once(__DIR__ . '/../config.php');
+  require_once("{$config['core']}/boot.php");
   
   $dia->autoload();
 
